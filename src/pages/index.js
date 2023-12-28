@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Header from '@/components/Header'
 import styles from '@/styles/Home.module.css'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero/Hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={`${styles.main} ${inter.className}`}>
+      <Hero />
+      {/* <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -110,7 +112,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
+      </main> */}
     </>
   )
 }

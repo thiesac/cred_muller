@@ -2,15 +2,21 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, Link, Container } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Image from 'next/image';
+import Logo from '../../public/assets/images/vetorizedlogo.png'
 
 export default function Header() {
     return (
         <AppBar position="static">
             <Container maxWidth="lg">
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={ { flexGrow: 1 } }>
-                        SeuLogo
-                    </Typography>
+                    <div style={ { flexGrow: 1 } }>
+                        <Image
+                            src={ Logo }
+                            alt="Logo da CredMuller"
+                            width={ 150 }
+                            height={ 50 }
+                        />
+                    </div>
                     <div>
                         <Link href="#main" underline="none" color="inherit" sx={ { marginRight: 2 } }>
                             Nossos Serviços
