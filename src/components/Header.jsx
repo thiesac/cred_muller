@@ -12,7 +12,7 @@ export default function Header() {
                     <div style={ { flexGrow: 1 } }>
                         <Image
                             src={ Logo }
-                            alt="Logo da CredMuller"
+                            alt="Logo CredMuller"
                             width={ 150 }
                             height={ 50 }
                         />

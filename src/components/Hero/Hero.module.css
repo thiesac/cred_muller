@@ -1,10 +1,11 @@
 .glass-container {
-    width: 300px; /* Ajuste conforme necessário */
-    height: 300px; /* Ajuste conforme necessário */
-    background: rgba(255, 255, 255, 0.2); /* Cor de fundo com transparência */
-    border-radius: 16px; /* Borda arredondada */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra */
-    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px); /* Efeito de desfoque para navegadores WebKit (como Chrome e Safari) */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda com transparência */
+    border: 1px solid rgba(255, 255, 255, 0.3)
 }

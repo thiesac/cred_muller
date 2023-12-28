@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-import styles from './Hero.module.css';
+// import styles from './Hero.module.css';
 
 export default function Hero() {
     const theme = useTheme();
@@ -10,27 +10,36 @@ export default function Hero() {
     return (
         <Container
             maxWidth={ false }
-            className={ styles.container }
+            // className={ styles.container }
             sx={ {
                 display: 'flex',
-                // flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                height: '100vh',
+                height: '80vh',
                 width: '100%',
                 textAlign: 'center',
+                zIndex: 1,
                 backgroundColor: theme.palette.primary.main,
-                flexGrow: 1
+                // flexGrow: 1
             } }
         >
-            <div className="glass-container">
+            {/* <div className="glass-container"> */}
                 <Image
-                    src="/assets/images/logo.png"
+                    src="/assets/images/vetorizedlogo.png"
                     alt="logo"
-                    width={ 1500 }
-                    height={ 1500 }
+                    layout="fill"
+                    objectFit="contain"
+                    sx={ {
+                        padding: {
+                            xs: '8px',
+                            sm: '12px',
+                            md: '16px',
+                            lg: '24px',
+                            xl: '32px',
+                        }
+                    } }
                 />
-            </div>
+            {/* </div> */}
         </Container>
     );
 }
