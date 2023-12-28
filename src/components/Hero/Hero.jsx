@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-// import styles from './Hero.module.css';
+import styles from './Hero.module.css';
 
 export default function Hero() {
     const theme = useTheme();
@@ -20,26 +20,26 @@ export default function Hero() {
                 textAlign: 'center',
                 zIndex: 1,
                 backgroundColor: theme.palette.primary.main,
-                // flexGrow: 1
             } }
         >
-            {/* <div className="glass-container"> */}
+            <div
+                sx={ {
+                    margin: {
+                        xs: theme.spacing(1),   
+                        sm: theme.spacing(1.5), // equivalente a '12px'
+                        md: theme.spacing(2),   // equivalente a '16px'
+                        lg: theme.spacing(3),   // equivalente a '24px'
+                        xl: theme.spacing(4),   // equivalente a '32px'
+                    }
+                } }
+            >
                 <Image
                     src="/assets/images/vetorizedlogo.png"
                     alt="logo"
                     layout="fill"
                     objectFit="contain"
-                    sx={ {
-                        padding: {
-                            xs: '8px',
-                            sm: '12px',
-                            md: '16px',
-                            lg: '24px',
-                            xl: '32px',
-                        }
-                    } }
                 />
-            {/* </div> */}
+            </div>
         </Container>
     );
 }
