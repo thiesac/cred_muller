@@ -10,12 +10,12 @@ export default function Main() {
 
     // cards icon
     const icons = [
-        <Money />,
-        <Receipt />,
-        <Payment />,
-        <Security />,
-        <Edit />,
-        <MoneyOff />
+        <Money color="secondary" style={ { fontSize: '2rem' } } />,
+        <Receipt color="secondary" style={ { fontSize: '2rem' } } />,
+        <Payment color="secondary" style={ { fontSize: '2rem' } } />,
+        <Security color="secondary" style={ { fontSize: '2rem' } } />,
+        <Edit color="secondary" style={ { fontSize: '2rem' } } />,
+        <MoneyOff color="secondary" style={ { fontSize: '2rem' } } />
     ];
 
     // cards title
@@ -29,34 +29,58 @@ export default function Main() {
     ];
 
     return (
-        <Grid container spacing={ 3 } className={ styles.container }>
-            { titles.map((title, index) => (
-                <Grid item xs={ 12 } sm={ 6 } md={ 4 } key={ index }>
-                    <Card>
-                        <CardContent>
-                            <Typography
-                                variant="h5"
-                                component="div"
-                                color="secondary"
-                                gutterBottom
-                                style={ { textAlign: 'center' } }
-                            >
-                                { title }
-                            </Typography>
-                            <div
-                                style={ {
-                                    display: 'flex',
-                                    justifyContent: 'center',marginBottom: theme.spacing(2)
-                                } }>
-                                { icons[index] }
-                            </div>
-                            <Typography variant="body2" color="secondary">
-                                Descrição ou detalhes sobre { title } podem ser adicionados aqui.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-            )) }
-        </Grid>
+        <div
+            className="about-container text-center"
+            style={ { 
+                margin: theme.spacing(8),
+             } }
+        >
+            <div className="p-8">
+                <h2
+                    className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl"
+                    style={ {
+                        textAlign: 'center',
+                        margin: theme.spacing(4),
+                        color: theme.palette.primary.main 
+                    } }
+                >
+                    Nossos Serviços
+                </h2>
+            </div>
+            <Grid container spacing={ 3 } className={ styles.container }>
+                { titles.map((title, index) => (
+                    <Grid item xs={ 12 } sm={ 6 } md={ 4 } key={ index }>
+                        <Card
+                            style={ {
+                                backgroundColor: theme.palette.customColor.main,
+                                boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+                            } }
+                        >
+                            <CardContent>
+                                <Typography
+                                    variant="h5"
+                                    component="div"
+                                    color="white"
+                                    gutterBottom
+                                    style={ { textAlign: 'center' } }
+                                >
+                                    { title }
+                                </Typography>
+                                <div
+                                    style={ {
+                                        display: 'flex',
+                                        justifyContent: 'center', marginBottom: theme.spacing(2)
+                                    } }>
+                                    { icons[index] }
+                                </div>
+                                <Typography variant="body2" color="white">
+                                    Descrição ou detalhes sobre { title } podem ser adicionados aqui.
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                )) }
+            </Grid>
+        </div>
     );
 }

@@ -1,12 +1,22 @@
 import React from 'react';
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function About() {
+    const theme = useTheme();
+
     return (
-        <div className="about-container text-center">
+        <div
+            className="about-container text-center"
+            style={ { marginTop: theme.spacing(4) } }
+        >
             <div className="p-8">
-                <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Sobre Nossa Empresa</h2>
+                <h2
+                    className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl"
+                    style={ { textAlign: 'center' } }
+                >
+                    Sobre Nossa Empresa
+                </h2>
             </div>
             <div className="space-y-4 px-10 max-w-screen-lg m-auto">
                 <Accordion>
@@ -15,11 +25,11 @@ export default function About() {
                         aria-controls="panel-content-1"
                         id="panel-header-1"
                     >
-                        <Typography variant="subtitle1"><strong>Credmüller</strong></Typography>
+                        <Typography variant="subtitle1"><strong>Quem Somos</strong></Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
-                            Bem-vindo à <strong>Credmüller</strong>, sua parceira confiável no mundo financeiro e de seguros. Somos uma corretora especializada, com muita experiência e uma dedicação incansável em servir nossos clientes.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ex similique incidunt accusantium explicabo odit, iusto corrupti doloremque eveniet atque temporibus modi dolore asperiores ipsam cupiditate. Totam esse corrupti molestias.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -30,34 +40,28 @@ export default function About() {
                         aria-controls="panel-content-2"
                         id="panel-header-2"
                     >
-                        <Typography variant="subtitle1">Compra de Dívidas</Typography>
+                        <Typography variant="subtitle1">Missão</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
-                            No coração de nossas operações está a compreensão profunda das complexidades do mercado financeiro. Como especialistas em compra de dívidas, facilitamos a transição para um futuro financeiro mais estável, oferecendo soluções sob medida que aliviam o peso das dívidas e redefinem a trajetória financeira de nossos clientes.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga et nobis voluptatum accusantium ipsa ab temporibus asperiores mollitia minus, quos vero consectetur soluta distinctio amet ut cum facere, veritatis dolor.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-
-                {/* Repita o mesmo padrão para os demais itens */ }
-                {/* ... */ }
-
                 <Accordion>
                     <AccordionSummary
                         expandIcon={ <ExpandMoreIcon /> }
                         aria-controls="panel-content-3"
                         id="panel-header-3"
                     >
-                        <Typography variant="subtitle1">Crédito e Financiamento</Typography>
+                        <Typography variant="subtitle1">Valores</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
-                            Além disso, reconhecemos a importância do crédito, tanto para indivíduos quanto para empresas. Nossa expertise em crédito pessoal e PJ permite-nos oferecer orientação precisa e estratégica, assegurando que nossos clientes tenham acesso às melhores oportunidades e vantagens disponíveis no mercado.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque consectetur error, repellendus labore dicta officiis saepe autem adipisci, maiores optio accusantium at explicabo est illum nesciunt, mollitia temporibus quasi quae!
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-
-                {/* Adicione mais Accordion conforme necessário */ }
             </div>
         </div>
     );
