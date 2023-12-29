@@ -36,16 +36,18 @@ export default function Main() {
              } }
         >
             <div className="p-8">
-                <h2
-                    className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl"
+                <Typography
+                    variant="h4"
+                    className="mt-2 text-center p-8"
                     style={ {
                         textAlign: 'center',
-                        margin: theme.spacing(4),
-                        color: theme.palette.primary.main 
+                        marginTop: theme.spacing(4),
+                        marginBottom: theme.spacing(4),
+                        color: theme.palette.primary.main
                     } }
                 >
                     Nossos Serviços
-                </h2>
+                </Typography>
             </div>
             <Grid container spacing={ 3 } className={ styles.container }>
                 { titles.map((title, index) => (
@@ -53,7 +55,7 @@ export default function Main() {
                         <Paper
                             elevation={ 2 }
                             style={ {
-                                backgroundColor: theme.palette.customColor.main,
+                                backgroundColor: theme.palette.backgroundGreen.main,
                                 padding: theme.spacing(2),
                                 borderRadius: '6px'
                             } }

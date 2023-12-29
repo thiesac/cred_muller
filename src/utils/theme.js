@@ -8,9 +8,12 @@ const theme = createTheme({
         secondary: {
             main: 'rgba(210, 181, 121)', //golden
         },
-        customColor: {
+        backgroundGreen: {
             main: 'rgba(33, 67, 53, 1)', // background green
         },
+        backgroundGolden: {
+            main: 'rgb(245, 220, 170, 0.819)',
+        }
     },
     typography: {
         fontFamily: 'var(--font-mono)',

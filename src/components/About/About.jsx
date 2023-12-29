@@ -8,18 +8,36 @@ export default function About() {
     return (
         <div
             className="about-container text-center"
-            style={ { marginTop: theme.spacing(4) } }
+            style={ {
+                paddingTop: theme.spacing(8),
+                paddingBottom: theme.spacing(8),
+                backgroundColor: theme.palette.backgroundGolden.main,
+            } }
         >
             <div className="p-8">
-                <h2
-                    className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl"
-                    style={ { textAlign: 'center' } }
+                <Typography
+                    variant="h4"
+                    className="mt-2 text-center p-8"
+                    style={ {
+                        textAlign: 'center',
+                        marginTop: theme.spacing(4),
+                        marginBottom: theme.spacing(4),
+                        color: theme.palette.primary.main
+                    } }
                 >
                     Sobre Nossa Empresa
-                </h2>
+                </Typography>
             </div>
             <div className="space-y-4 px-10 max-w-screen-lg m-auto">
-                <Accordion>
+                <Accordion
+                    expanded={ true }
+                    style={ {
+                    marginLeft: theme.spacing(12),
+                    marginRight: theme.spacing(12),
+                    backgroundColor: 'white',
+                    color: theme.palette.primary.main 
+                } }
+                >
                     <AccordionSummary
                         expandIcon={ <ExpandMoreIcon /> }
                         aria-controls="panel-content-1"
@@ -34,13 +52,21 @@ export default function About() {
                     </AccordionDetails>
                 </Accordion>
 
-                <Accordion>
+                <Accordion
+                    expanded={ true }
+                    style={ {
+                        marginLeft: theme.spacing(12),
+                        marginRight: theme.spacing(12),
+                        backgroundColor: 'white',
+                        color: theme.palette.primary.main
+                    } }
+                >
                     <AccordionSummary
                         expandIcon={ <ExpandMoreIcon /> }
                         aria-controls="panel-content-2"
                         id="panel-header-2"
                     >
-                        <Typography variant="subtitle1">Missão</Typography>
+                        <Typography variant="subtitle1"><strong>Missão</strong></Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
@@ -48,13 +74,21 @@ export default function About() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion>
+                <Accordion
+                    expanded={ true }
+                    style={ {
+                        marginLeft: theme.spacing(12),
+                        marginRight: theme.spacing(12),
+                        backgroundColor: 'white',
+                        color: theme.palette.primary.main
+                    } }
+                >
                     <AccordionSummary
                         expandIcon={ <ExpandMoreIcon /> }
                         aria-controls="panel-content-3"
                         id="panel-header-3"
                     >
-                        <Typography variant="subtitle1">Valores</Typography>
+                        <Typography variant="subtitle1"><strong>Valores</strong></Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                         <Typography>
