@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography, useTheme } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function About() {
     const theme = useTheme();
+    const [expanded1, setExpanded1] = useState(true);
+    const [expanded2, setExpanded2] = useState(true);
+    const [expanded3, setExpanded3] = useState(true);
 
     return (
         <div
@@ -30,7 +33,8 @@ export default function About() {
             </div>
             <div className="space-y-4 px-10 max-w-screen-lg m-auto">
                 <Accordion
-                    expanded={ true }
+                    expanded={ expanded1 }
+                    onChange={ () => setExpanded1(!expanded1) }
                     style={ {
                     marginLeft: theme.spacing(12),
                     marginRight: theme.spacing(12),
@@ -53,7 +57,8 @@ export default function About() {
                 </Accordion>
 
                 <Accordion
-                    expanded={ true }
+                    expanded={ expanded2 }
+                    onChange={ () => setExpanded2(!expanded2) }
                     style={ {
                         marginLeft: theme.spacing(12),
                         marginRight: theme.spacing(12),
@@ -75,7 +80,8 @@ export default function About() {
                     </AccordionDetails>
                 </Accordion>
                 <Accordion
-                    expanded={ true }
+                    expanded={ expanded3 }
+                    onChange={ () => setExpanded3(!expanded3) }
                     style={ {
                         marginLeft: theme.spacing(12),
                         marginRight: theme.spacing(12),
