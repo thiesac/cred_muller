@@ -10,7 +10,6 @@ export default function Hero() {
     return (
         <Container
             maxWidth={ false }
-            // className={ styles.container }
             sx={ {
                 display: 'flex',
                 alignItems: 'center',
@@ -18,6 +17,7 @@ export default function Hero() {
                 height: '80vh',
                 width: '100%',
                 textAlign: 'center',
+                position: 'relative',
                 zIndex: 1,
                 backgroundColor: theme.palette.primary.main,
             } }

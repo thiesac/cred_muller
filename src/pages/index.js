@@ -19,9 +19,15 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      <Main />
-      <About />
-      <Contact />
+      <section id="main">
+        <Main />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
     </>
   )
 }
